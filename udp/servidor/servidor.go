@@ -36,7 +36,7 @@ func main() {
 		fmt.Println("Cliente : ", endereco)
 		fmt.Println("Recebido do cliente:", string(buffer[:tamMensagem]))
 
-		mensagem := []byte((buffer[:tamMensagem]))
+		mensagem := []byte(buffer[:tamMensagem])
 		_, err = socket.WriteToUDP(mensagem, endereco)
 		if err != nil {
 			fmt.Println("Erro ao tentar enviar uma mensagem para o cliente:", err)

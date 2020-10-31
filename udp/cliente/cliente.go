@@ -33,7 +33,8 @@ func main() {
 	defer socket.Close()
 
 	for {
-		// write a message to server
+		// Envie uma mensagem para o servidor
+		fmt.Print("Digite uma mensagem para o servidor: ")
 		johnLennon := bufio.NewReader(os.Stdin)
 		mensagem, err := johnLennon.ReadString('\n')
 		if err == io.EOF {
